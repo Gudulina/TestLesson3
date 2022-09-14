@@ -23,14 +23,31 @@ from random import randint
 # [2, 3, 4, 5, 6] => [12, 15, 16];
 # [2, 3, 5, 6] => [12, 15]
 
-sp = []
-for i in range(5):
-    sp.append(randint(0, 10))
-print(sp)
+# sp = []
+# for i in range(5):
+#     sp.append(randint(0, 10))
+# print(sp)
 
-i = 0
-count = len(sp) - 1
-while i <= (len(sp) - 1)/2:
-    print(sp[i] * sp[count])
-    i += 1
-    count -= 1
+# i = 0
+# count = len(sp) - 1
+# while i <= (len(sp) - 1)/2:
+#     print(sp[i] * sp[count])
+#     i += 1
+#     count -= 1
+
+
+# 3. Задайте список из вещественных чисел. # Напишите программу, которая найдёт разницу 
+# между максимальным и минимальным значением дробной части элементов.
+# Пример:
+# [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+
+sp = [1.1, 1.2, 3.1, 5, 10.01]
+min = 1
+max = 0
+for i in sp:
+    if (i - int(i)) <= min:
+        min = i - int(i)
+    if (i - int(i)) >= max:
+        max = i - int(i)
+#a = int ((max-min) * 100) / 100
+print(int ((max-min) * 100) / 100)

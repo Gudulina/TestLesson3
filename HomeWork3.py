@@ -3,7 +3,7 @@
 # Пример:
 # [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
-from random import randint
+# from random import randint
 # sp = []
 # for i in range(7):
 #     sp.append(randint(0, 10))
@@ -22,7 +22,7 @@ from random import randint
 # Пример:
 # [2, 3, 4, 5, 6] => [12, 15, 16];
 # [2, 3, 5, 6] => [12, 15]
-
+# from random import randint
 # sp = []
 # for i in range(5):
 #     sp.append(randint(0, 10))
@@ -73,12 +73,14 @@ from random import randint
 # Пример:
 # для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 
-num = int(input('Введите число: '))
-sp = [0, 1]
+from distutils.spawn import spawn
+
+def fibonacci(n):
+    a, b = 1, 1
+    for i in range(n):
+        yield a
+        a, b = b, a + b
+
+sp = list(fibonacci(8))
 print(sp)
 
-i = 0
-while i <= num:
-    sp.insert(2, sp[i]+sp[i+1])
-    i += 1
-print(sp)

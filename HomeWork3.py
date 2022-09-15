@@ -41,13 +41,40 @@ from random import randint
 # Пример:
 # [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
-sp = [1.1, 1.2, 3.1, 5, 10.01]
-min = 1
-max = 0
-for i in sp:
-    if (i - int(i)) <= min:
-        min = i - int(i)
-    if (i - int(i)) >= max:
-        max = i - int(i)
-#a = int ((max-min) * 100) / 100
-print(int ((max-min) * 100) / 100)
+# sp = [1.1, 1.2, 3.1, 5, 10.01]
+# min = 1
+# max = 0
+# for i in sp:
+#     if (i - int(i)) <= min:
+#         min = i - int(i)
+#     if (i - int(i)) >= max:
+#         max = i - int(i)
+# print(int ((max-min) * 100) / 100)
+
+
+# 4. Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+# Пример:
+# 45 -> 101101
+# 3 -> 11
+# 2 -> 10
+
+# Способ 1
+num = int(input('Введите число: '))
+sp = []
+i = 0
+while num >= 2:
+    sp.append(num % 2)
+    num = num // 2
+sp.append(num)
+sp.reverse()
+print(sp)
+
+
+    
+# Способ 2
+# num = int(input('Введите число: '))
+# res = list(map(int, str(num)))
+# res.reverse()
+# print("The list from number is " + str(res))
+# # for i in res:
+# #     res[i] * 10**i

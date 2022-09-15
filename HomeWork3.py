@@ -58,7 +58,6 @@ from random import randint
 # 3 -> 11
 # 2 -> 10
 
-# Способ 1
 num = int(input('Введите число: '))
 sp = []
 i = 0
@@ -69,12 +68,3 @@ sp.append(num)
 sp.reverse()
 print(sp)
 
-
-    
-# Способ 2
-# num = int(input('Введите число: '))
-# res = list(map(int, str(num)))
-# res.reverse()
-# print("The list from number is " + str(res))
-# # for i in res:
-# #     res[i] * 10**i

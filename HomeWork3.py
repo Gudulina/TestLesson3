@@ -73,14 +73,15 @@
 # Пример:
 # для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 
-from distutils.spawn import spawn
+k = int(input('Введите число: '))
+print(k)
 
-def fibonacci(n):
-    a, b = 1, 1
-    for i in range(n):
-        yield a
-        a, b = b, a + b
+# def fibonacci(n):
+#     a, b = 1, 1
+#     for i in range(n):
+#         yield a
+#         a, b = b, a + b
 
-sp = list(fibonacci(8))
-print(sp)
+# sp = list(fibonacci(8))
+# print(sp)
 

@@ -17,17 +17,17 @@
 # print(sum)
 
 
-# 2/ Напишите программу, которая найдёт произведение пар чисел списка.
+# 2. Напишите программу, которая найдёт произведение пар чисел списка.
 # Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 # Пример:
 # [2, 3, 4, 5, 6] => [12, 15, 16];
 # [2, 3, 5, 6] => [12, 15]
 # from random import randint
 # sp = []
-# for i in range(5):
+# for i in range(int(input('Введите количество элементов: '))):
 #     sp.append(randint(0, 10))
 # print(sp)
-
+#
 # i = 0
 # count = len(sp) - 1
 # while i <= (len(sp) - 1)/2:
@@ -74,14 +74,10 @@
 # для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 
 k = int(input('Введите число: '))
-print(k)
-
-# def fibonacci(n):
-#     a, b = 1, 1
-#     for i in range(n):
-#         yield a
-#         a, b = b, a + b
-
-# sp = list(fibonacci(8))
-# print(sp)
-
+sp = [0]*(k*2)
+sp.insert(k+1, 1)
+for i in range(k+2, len(sp)):
+        sp[i] = sp[i-2]+sp[i-1]
+for i in range(k-1, -1, -1):
+        sp[i] = sp[i+2]-sp[i+1]
+print(sp)
